@@ -114,7 +114,9 @@ if __name__=="__main__":
     df = pd.DataFrame(data)
     print(df)
     X=df.iloc[:, :-1]
+    print(X)
     y=df.iloc[:,-1]
+    print(y)
     tree=DecisionTreeID3(max_depth=3, min_samples_split=2)
     tree.fit(X,y)
     predict = tree.predict(X)
